@@ -1,20 +1,21 @@
-package com.example.user.models.entity;
+package com.example.user.models;
 
 import jakarta.persistence.*;
 import lombok.*;
 
-@Data
-@Builder
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="usuarios")
+@Table(name="users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nombre;
+    private String name;
 
     @Column(unique = true)
     private String email;
