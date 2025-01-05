@@ -1,4 +1,4 @@
-package com.example.user.request;
+package com.dailycodework.dreamshops.request;
 
 import lombok.Data;
 

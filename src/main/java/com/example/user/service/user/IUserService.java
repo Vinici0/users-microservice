@@ -1,4 +1,4 @@
-package com.example.user.service.user;
+package com.dailycodework.dreamshops.service.user;
 
 import com.dailycodework.dreamshops.dto.UserDto;
 import com.dailycodework.dreamshops.model.User;

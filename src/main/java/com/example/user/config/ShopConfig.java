@@ -1,5 +1,6 @@
-package com.example.user.config;
+package com.dailycodework.dreamshops.config;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

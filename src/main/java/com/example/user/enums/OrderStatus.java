@@ -1,4 +1,4 @@
-package com.example.user.enums;
+package com.dailycodework.dreamshops.enums;
 
 public enum OrderStatus {
     PENDING,

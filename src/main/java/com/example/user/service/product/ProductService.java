@@ -1,4 +1,4 @@
-package com.example.user.service.product;
+package com.dailycodework.dreamshops.service.product;
 
 import com.dailycodework.dreamshops.dto.ImageDto;
 import com.dailycodework.dreamshops.dto.ProductDto;

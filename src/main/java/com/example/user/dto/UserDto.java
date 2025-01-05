@@ -1,5 +1,7 @@
-package com.example.user.dto;
+package com.dailycodework.dreamshops.dto;
 
+import com.dailycodework.dreamshops.model.Cart;
+import com.dailycodework.dreamshops.model.Order;
 import lombok.Data;
 
 import java.util.List;

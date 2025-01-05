@@ -1,4 +1,4 @@
-package com.example.user.service.category;
+package com.dailycodework.dreamshops.service.category;
 
 import com.dailycodework.dreamshops.exceptions.AlreadyExistsException;
 import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;

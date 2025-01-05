@@ -1,4 +1,4 @@
-package com.example.user.response;
+package com.dailycodework.dreamshops.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

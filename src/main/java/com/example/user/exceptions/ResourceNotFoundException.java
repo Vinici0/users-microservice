@@ -1,4 +1,4 @@
-package com.example.user.exceptions;
+package com.dailycodework.dreamshops.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

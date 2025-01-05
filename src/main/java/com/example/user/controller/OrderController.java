@@ -1,4 +1,4 @@
-package com.example.user.controller;
+package com.dailycodework.dreamshops.controller;
 
 import com.dailycodework.dreamshops.dto.OrderDto;
 import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;

@@ -1,4 +1,4 @@
-package com.example.user.service.cart;
+package com.dailycodework.dreamshops.service.cart;
 
 import com.dailycodework.dreamshops.model.CartItem;
 

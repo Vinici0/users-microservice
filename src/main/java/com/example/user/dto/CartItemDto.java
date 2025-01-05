@@ -1,4 +1,6 @@
-package com.example.user.dto;
+package com.dailycodework.dreamshops.dto;
+
+import com.dailycodework.dreamshops.model.Product;
 
 import java.math.BigDecimal;
 
