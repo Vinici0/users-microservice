@@ -1,9 +1,8 @@
-package com.dailycodework.dreamshops.controller;
+package com.example.user.controller;
 
 import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
 import com.dailycodework.dreamshops.model.Cart;
 import com.dailycodework.dreamshops.response.ApiResponse;
-import com.dailycodework.dreamshops.service.cart.CartService;
 import com.dailycodework.dreamshops.service.cart.ICartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

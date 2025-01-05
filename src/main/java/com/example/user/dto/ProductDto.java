@@ -1,11 +1,6 @@
-package com.dailycodework.dreamshops.dto;
+package com.example.user.dto;
 
 import com.dailycodework.dreamshops.model.Category;
-import com.dailycodework.dreamshops.model.Image;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.Data;
 
 import java.math.BigDecimal;

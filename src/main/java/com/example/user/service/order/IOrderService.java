@@ -1,4 +1,4 @@
-package com.dailycodework.dreamshops.service.order;
+package com.example.user.service.order;
 
 import com.dailycodework.dreamshops.dto.OrderDto;
 import com.dailycodework.dreamshops.model.Order;

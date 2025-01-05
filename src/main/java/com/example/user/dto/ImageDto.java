@@ -1,4 +1,4 @@
-package com.dailycodework.dreamshops.dto;
+package com.example.user.dto;
 
 import lombok.Data;
 

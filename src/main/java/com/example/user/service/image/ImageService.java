@@ -1,4 +1,4 @@
-package com.dailycodework.dreamshops.service.image;
+package com.example.user.service.image;
 
 import com.dailycodework.dreamshops.dto.ImageDto;
 import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;

@@ -1,4 +1,4 @@
-package com.dailycodework.dreamshops.repository;
+package com.example.user.repository;
 
 import com.dailycodework.dreamshops.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;

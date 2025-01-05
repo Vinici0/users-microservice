@@ -1,4 +1,4 @@
-package com.dailycodework.dreamshops.model;
+package com.example.user.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
