@@ -1,9 +1,6 @@
-package com.dailycodework.dreamshops.request;
+package com.example.user.request;
 
-import com.dailycodework.dreamshops.model.Category;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import com.example.user.model.Category;
 import lombok.Data;
 
 import java.math.BigDecimal;

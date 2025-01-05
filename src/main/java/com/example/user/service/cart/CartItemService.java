@@ -1,12 +1,12 @@
-package com.dailycodework.dreamshops.service.cart;
+package com.example.user.service.cart;
 
-import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
-import com.dailycodework.dreamshops.model.Cart;
-import com.dailycodework.dreamshops.model.CartItem;
-import com.dailycodework.dreamshops.model.Product;
-import com.dailycodework.dreamshops.repository.CartItemRepository;
-import com.dailycodework.dreamshops.repository.CartRepository;
-import com.dailycodework.dreamshops.service.product.IProductService;
+import com.example.user.exceptions.ResourceNotFoundException;
+import com.example.user.model.Cart;
+import com.example.user.model.CartItem;
+import com.example.user.model.Product;
+import com.example.user.repository.CartItemRepository;
+import com.example.user.repository.CartRepository;
+import com.example.user.service.product.IProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

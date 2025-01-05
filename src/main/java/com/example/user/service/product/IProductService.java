@@ -1,9 +1,9 @@
-package com.dailycodework.dreamshops.service.product;
-import com.dailycodework.dreamshops.dto.ProductDto;
-import com.dailycodework.dreamshops.model.Product;
-import com.dailycodework.dreamshops.request.AddProductRequest;
-import com.dailycodework.dreamshops.request.ProductUpdateRequest;
+package com.example.user.service.product;
 
+import com.example.user.dto.ProductDto;
+import com.example.user.model.Product;
+import com.example.user.request.AddProductRequest;
+import com.example.user.request.ProductUpdateRequest;
 
 import java.util.List;
 

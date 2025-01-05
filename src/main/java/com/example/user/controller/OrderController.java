@@ -1,10 +1,10 @@
-package com.dailycodework.dreamshops.controller;
+package com.example.user.controller;
 
-import com.dailycodework.dreamshops.dto.OrderDto;
-import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
-import com.dailycodework.dreamshops.model.Order;
-import com.dailycodework.dreamshops.response.ApiResponse;
-import com.dailycodework.dreamshops.service.order.IOrderService;
+import com.example.user.dto.OrderDto;
+import com.example.user.exceptions.ResourceNotFoundException;
+import com.example.user.model.Order;
+import com.example.user.response.ApiResponse;
+import com.example.user.service.order.IOrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

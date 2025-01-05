@@ -1,6 +1,6 @@
-package com.dailycodework.dreamshops.repository;
+package com.example.user.repository;
 
-import com.dailycodework.dreamshops.model.Category;
+import com.example.user.model.Category;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CategoryRepository extends JpaRepository<Category, Long> {

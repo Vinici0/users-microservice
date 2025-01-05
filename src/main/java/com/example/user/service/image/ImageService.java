@@ -1,11 +1,11 @@
-package com.dailycodework.dreamshops.service.image;
+package com.example.user.service.image;
 
-import com.dailycodework.dreamshops.dto.ImageDto;
-import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
-import com.dailycodework.dreamshops.model.Image;
-import com.dailycodework.dreamshops.model.Product;
-import com.dailycodework.dreamshops.repository.ImageRepository;
-import com.dailycodework.dreamshops.service.product.IProductService;
+import com.example.user.dto.ImageDto;
+import com.example.user.exceptions.ResourceNotFoundException;
+import com.example.user.model.Image;
+import com.example.user.model.Product;
+import com.example.user.repository.ImageRepository;
+import com.example.user.service.product.IProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

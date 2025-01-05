@@ -1,6 +1,6 @@
-package com.dailycodework.dreamshops.repository;
+package com.example.user.repository;
 
-import com.dailycodework.dreamshops.model.Order;
+import com.example.user.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

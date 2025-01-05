@@ -1,16 +1,14 @@
-package com.dailycodework.dreamshops.controller;
+package com.example.user.controller;
 
-import com.dailycodework.dreamshops.dto.ImageDto;
-import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
-import com.dailycodework.dreamshops.model.Image;
-import com.dailycodework.dreamshops.model.Product;
-import com.dailycodework.dreamshops.response.ApiResponse;
-import com.dailycodework.dreamshops.service.image.IImageService;
+import com.example.user.dto.ImageDto;
+import com.example.user.exceptions.ResourceNotFoundException;
+import com.example.user.model.Image;
+import com.example.user.response.ApiResponse;
+import com.example.user.service.image.IImageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -1,7 +1,7 @@
-package com.dailycodework.dreamshops.service.order;
+package com.example.user.service.order;
 
-import com.dailycodework.dreamshops.dto.OrderDto;
-import com.dailycodework.dreamshops.model.Order;
+import com.example.user.dto.OrderDto;
+import com.example.user.model.Order;
 
 import java.util.List;
 

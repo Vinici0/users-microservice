@@ -1,6 +1,6 @@
-package com.dailycodework.dreamshops.request;
+package com.example.user.request;
 
-import com.dailycodework.dreamshops.model.Category;
+import com.example.user.model.Category;
 import lombok.Data;
 
 import java.math.BigDecimal;

@@ -1,6 +1,6 @@
-package com.dailycodework.dreamshops.model;
+package com.example.user.model;
 
-import com.dailycodework.dreamshops.enums.OrderStatus;
+import com.example.user.enums.OrderStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -8,7 +8,6 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 

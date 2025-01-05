@@ -1,6 +1,6 @@
-package com.dailycodework.dreamshops.service.category;
+package com.example.user.service.category;
 
-import com.dailycodework.dreamshops.model.Category;
+import com.example.user.model.Category;
 
 import java.util.List;
 

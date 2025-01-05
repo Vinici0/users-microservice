@@ -1,6 +1,6 @@
-package com.dailycodework.dreamshops.repository;
+package com.example.user.repository;
 
-import com.dailycodework.dreamshops.model.User;
+import com.example.user.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User, Long> {

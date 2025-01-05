@@ -1,9 +1,9 @@
-package com.dailycodework.dreamshops.service.category;
+package com.example.user.service.category;
 
-import com.dailycodework.dreamshops.exceptions.AlreadyExistsException;
-import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
-import com.dailycodework.dreamshops.model.Category;
-import com.dailycodework.dreamshops.repository.CategoryRepository;
+import com.example.user.exceptions.AlreadyExistsException;
+import com.example.user.exceptions.ResourceNotFoundException;
+import com.example.user.model.Category;
+import com.example.user.repository.CategoryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

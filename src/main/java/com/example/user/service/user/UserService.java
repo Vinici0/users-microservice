@@ -1,12 +1,12 @@
-package com.dailycodework.dreamshops.service.user;
+package com.example.user.service.user;
 
-import com.dailycodework.dreamshops.dto.UserDto;
-import com.dailycodework.dreamshops.exceptions.AlreadyExistsException;
-import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
-import com.dailycodework.dreamshops.model.User;
-import com.dailycodework.dreamshops.repository.UserRepository;
-import com.dailycodework.dreamshops.request.CreateUserRequest;
-import com.dailycodework.dreamshops.request.UserUpdateRequest;
+import com.example.user.dto.UserDto;
+import com.example.user.exceptions.AlreadyExistsException;
+import com.example.user.exceptions.ResourceNotFoundException;
+import com.example.user.model.User;
+import com.example.user.repository.UserRepository;
+import com.example.user.request.CreateUserRequest;
+import com.example.user.request.UserUpdateRequest;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;

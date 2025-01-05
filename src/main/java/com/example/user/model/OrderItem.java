@@ -1,4 +1,4 @@
-package com.dailycodework.dreamshops.model;
+package com.example.user.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;

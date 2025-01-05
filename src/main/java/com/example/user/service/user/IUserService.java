@@ -1,9 +1,9 @@
-package com.dailycodework.dreamshops.service.user;
+package com.example.user.service.user;
 
-import com.dailycodework.dreamshops.dto.UserDto;
-import com.dailycodework.dreamshops.model.User;
-import com.dailycodework.dreamshops.request.CreateUserRequest;
-import com.dailycodework.dreamshops.request.UserUpdateRequest;
+import com.example.user.dto.UserDto;
+import com.example.user.model.User;
+import com.example.user.request.CreateUserRequest;
+import com.example.user.request.UserUpdateRequest;
 
 public interface IUserService {
 

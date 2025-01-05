@@ -1,10 +1,9 @@
-package com.dailycodework.dreamshops.controller;
+package com.example.user.controller;
 
-import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
-import com.dailycodework.dreamshops.response.ApiResponse;
-import com.dailycodework.dreamshops.service.cart.CartItemService;
-import com.dailycodework.dreamshops.service.cart.ICartItemService;
-import com.dailycodework.dreamshops.service.cart.ICartService;
+import com.example.user.exceptions.ResourceNotFoundException;
+import com.example.user.response.ApiResponse;
+import com.example.user.service.cart.ICartItemService;
+import com.example.user.service.cart.ICartService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

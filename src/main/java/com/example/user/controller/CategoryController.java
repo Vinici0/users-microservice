@@ -1,11 +1,11 @@
-package com.dailycodework.dreamshops.controller;
+package com.example.user.controller;
 
 
-import com.dailycodework.dreamshops.exceptions.AlreadyExistsException;
-import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
-import com.dailycodework.dreamshops.model.Category;
-import com.dailycodework.dreamshops.response.ApiResponse;
-import com.dailycodework.dreamshops.service.category.ICategoryService;
+import com.example.user.exceptions.AlreadyExistsException;
+import com.example.user.exceptions.ResourceNotFoundException;
+import com.example.user.model.Category;
+import com.example.user.response.ApiResponse;
+import com.example.user.service.category.ICategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

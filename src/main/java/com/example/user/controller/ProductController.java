@@ -1,13 +1,13 @@
-package com.dailycodework.dreamshops.controller;
+package com.example.user.controller;
 
 
-import com.dailycodework.dreamshops.dto.ProductDto;
-import com.dailycodework.dreamshops.exceptions.ResourceNotFoundException;
-import com.dailycodework.dreamshops.model.Product;
-import com.dailycodework.dreamshops.request.AddProductRequest;
-import com.dailycodework.dreamshops.request.ProductUpdateRequest;
-import com.dailycodework.dreamshops.response.ApiResponse;
-import com.dailycodework.dreamshops.service.product.IProductService;
+import com.example.user.dto.ProductDto;
+import com.example.user.exceptions.ResourceNotFoundException;
+import com.example.user.model.Product;
+import com.example.user.request.AddProductRequest;
+import com.example.user.request.ProductUpdateRequest;
+import com.example.user.response.ApiResponse;
+import com.example.user.service.product.IProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

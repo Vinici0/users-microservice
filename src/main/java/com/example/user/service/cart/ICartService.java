@@ -1,6 +1,6 @@
-package com.dailycodework.dreamshops.service.cart;
+package com.example.user.service.cart;
 
-import com.dailycodework.dreamshops.model.Cart;
+import com.example.user.model.Cart;
 
 import java.math.BigDecimal;
 
