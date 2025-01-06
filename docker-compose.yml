@@ -9,7 +9,7 @@ services:
     environment:
       POSTGRES_USER: root     # Usuario de PostgreSQL
       POSTGRES_PASSWORD: root # Contraseña del usuario
-      POSTGRES_DB: msvc    # Base de datos inicial
+      POSTGRES_DB: msvc    # Base de datos inicial 
     volumes:
       - postgres_data:/var/lib/postgresql/data  # Volumen para persistencia de datos
     restart: always  # Asegura que el contenedor se reinicie automáticamente si falla
