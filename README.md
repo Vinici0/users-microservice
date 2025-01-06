@@ -1,395 +1,135 @@
-# users-microservice
+# E-commerce Microservices Architecture with Spring Boot
 
-A continuación te propongo una versión mejorada de tu código para manejar a tus usuarios, inspirada en el enfoque de DailyCodeWork. Incluye:
+![image](https://github.com/user-attachments/assets/72f3bc62-52e1-44c0-9c6c-389276bad677)
 
-1. **Uso de DTOs** para evitar exponer directamente la entidad `User` en los endpoints.
-2. **Manejo centralizado de excepciones** (por ejemplo, `ResourceNotFoundException`, `AlreadyExistsException`) para respuestas más claras.
-3. **Buenas prácticas REST**: uso de verbos HTTP adecuados (`GET`, `POST`, `PUT`, `DELETE`) y rutas limpias.
-4. **Estructura** dividida en capas (Controller, Service, DTO, Request, etc.).
 
-> **Importante**: Ajusta los nombres de los paquetes, la configuración del `api.prefix`, y otras referencias a tu contexto/proyecto específico.
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2-brightgreen.svg)](https://spring.io/projects/spring-boot)
+[![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
+[![Status](https://img.shields.io/badge/Status-In%20Development-yellow.svg)]()
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
----
+## 🚀 Descripción del Proyecto
 
-## 1. Excepciones personalizadas
+Sistema de e-commerce basado en una arquitectura de microservicios utilizando Spring Boot y Java. El proyecto implementa patrones modernos de diseño y las mejores prácticas de la industria, demostrando un profundo entendimiento de arquitecturas distribuidas y desarrollo backend.
 
-### `ResourceNotFoundException.java`
-```java
-package com.example.user.exceptions;
+## 🏗️ Estado Actual del Proyecto
 
-public class ResourceNotFoundException extends RuntimeException {
-    public ResourceNotFoundException(String message) {
-        super(message);
-    }
-}
+Este proyecto se encuentra en fase de construcción activa. Actualmente, se ha implementado el primer microservicio:
+
+### Product Service (Implementado ✅)
+- **Entidades principales:**
+  - Category (Categorías de productos)
+  - Product (Productos)
+  - Image (Imágenes de productos)
+- **Características implementadas:**
+  - CRUD completo para todas las entidades
+  - Relaciones entre entidades
+  - Validaciones de datos
+  - Manejo de excepciones personalizado
+  - Documentación con Swagger/OpenAPI
+
+### Servicios Planificados 🚧
+Los siguientes servicios están planificados para desarrollo futuro:
+- Order Service
+- Payment Service
+- Auth Service
+- API Gateway
+
+## 🛠️ Tecnologías Implementadas (Product Service)
+
+- **Spring Boot** - Framework principal
+- **Spring Data JPA** - Persistencia de datos
+- **PostgreSQL** - Base de datos
+- **Swagger/OpenAPI** - Documentación de APIs
+- **JUnit & Mockito** - Testing
+- **Maven** - Gestión de dependencias
+- **Lombok** - Reducción de código boilerplate
+
+## 📋 Requisitos Previos
+
+- Java 17 o superior
+- Maven 3.8+
+- PostgreSQL 14+
+- IDE de tu preferencia (IntelliJ IDEA recomendado)
+
+## 🚀 Instalación y Ejecución
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tuusuario/ecommerce-microservices
+
+# Navegar al directorio del Product Service
+cd ecommerce-microservices/product-service
+
+# Compilar el servicio
+mvn clean install
+
+# Ejecutar el servicio
+./mvnw spring-boot:run
 ```
 
-### `AlreadyExistsException.java`
-```java
-package com.example.user.exceptions;
+## 📚 Documentación del Product Service
 
-public class AlreadyExistsException extends RuntimeException {
-    public AlreadyExistsException(String message) {
-        super(message);
-    }
-}
+La documentación de la API está disponible en:
+- Swagger UI: `http://localhost:8080/swagger-ui.html`
+- API Docs: `http://localhost:8080/v3/api-docs`
+
+### Estructura de Entidades
+
+```plaintext
+Category
+├── id
+├── name
+└── products (One-to-Many → Product)
+
+Product
+├── id
+├── name
+├── description
+├── price
+├── stock
+├── category (Many-to-One → Category)
+└── images (One-to-Many → Image)
+
+Image
+├── id
+├── url
+├── description
+└── product (Many-to-One → Product)
 ```
 
----
+## 🧪 Testing
 
-## 2. DTO y Requests
-
-### `UserDto.java`
-Este DTO se utiliza para exponer la información del usuario **sin** exponer toda la entidad (por ejemplo, podrías omitir la contraseña, o enmascararla si fuera necesario).
-
-```java
-package com.example.user.dto;
-
-import lombok.Data;
-
-@Data
-public class UserDto {
-    private Long id;
-    private String nombre;
-    private String email;
-    // Por seguridad, en muchos casos la password no se expone en el DTO
-}
+```bash
+# Ejecutar tests del Product Service
+mvn test
 ```
 
-### `CreateUserRequest.java`
-Request para crear un usuario.
-```java
-package com.example.user.request;
+## 📈 Próximos Pasos
 
-import lombok.Data;
+- [ ] Implementación del Order Service
+- [ ] Integración con servicios de almacenamiento para imágenes
+- [ ] Implementación del Payment Service
+- [ ] Sistema de autenticación y autorización
+- [ ] API Gateway
+- [ ] Implementación de caché
+- [ ] Logs centralizados
+- [ ] Métricas y monitoreo
 
-@Data
-public class CreateUserRequest {
-    private String nombre;
-    private String email;
-    private String password;
-}
-```
+## 👨‍💻 Contribución
 
-### `UserUpdateRequest.java`
-Request para actualizar un usuario.
-```java
-package com.example.user.request;
+El proyecto está en fase inicial de desarrollo. Si deseas contribuir:
+1. Haz fork del repositorio
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-import lombok.Data;
+## 📄 Licencia
 
-@Data
-public class UserUpdateRequest {
-    private String nombre;
-    private String email;
-    // Podrías agregar o quitar campos según qué se permita actualizar
-}
-```
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
 
----
+## 📞 Contacto
 
-## 3. Respuesta de API Estandarizada
-
-### `ApiResponse.java`
-Una clase simple para envolver la respuesta en un objeto con un mensaje y datos.
-
-```java
-package com.example.user.response;
-
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class ApiResponse {
-    private String message;
-    private Object data;
-}
-```
-
----
-
-## 4. Entidad `User` (mantienes tu código actual)
-
-```java
-package com.example.user.models.entity;
-
-import jakarta.persistence.*;
-import lombok.*;
-
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-@Entity
-@Table(name="usuarios")
-public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
-    private String nombre;
-
-    @Column(unique = true)
-    private String email;
-
-    private String password;
-}
-```
-
----
-
-## 5. Repositorio
-
-Si no lo tienes aún, necesitarás un repositorio (o DAO) que extienda `JpaRepository` o similar para interactuar con la base de datos:
-
-```java
-package com.example.user.repository;
-
-import com.example.user.models.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
-
-import java.util.Optional;
-
-public interface UserRepository extends JpaRepository<User, Long> {
-    // Por ejemplo, para verificar emails duplicados
-    boolean existsByEmail(String email);
-
-    Optional<User> findByEmail(String email);
-}
-```
-
----
-
-## 6. Interfaz de Servicio
-
-Define los métodos que tu servicio debe proveer:
-
-```java
-package com.example.user.services;
-
-import com.example.user.dto.UserDto;
-import com.example.user.exceptions.AlreadyExistsException;
-import com.example.user.exceptions.ResourceNotFoundException;
-import com.example.user.models.entity.User;
-import com.example.user.request.CreateUserRequest;
-import com.example.user.request.UserUpdateRequest;
-
-import java.util.List;
-
-public interface UserService {
-
-    List<User> getAllUsers();
-    User getUserById(Long userId) throws ResourceNotFoundException;
-
-    User createUser(CreateUserRequest request) throws AlreadyExistsException;
-    User updateUser(UserUpdateRequest request, Long userId) throws ResourceNotFoundException;
-    void deleteUser(Long userId) throws ResourceNotFoundException;
-
-    UserDto convertUserToDto(User user);
-}
-```
-
----
-
-## 7. Implementación del Servicio
-
-Aquí aplicas la lógica de negocio y de persistencia.
-
-```java
-package com.example.user.services.impl;
-
-import com.example.user.dto.UserDto;
-import com.example.user.exceptions.AlreadyExistsException;
-import com.example.user.exceptions.ResourceNotFoundException;
-import com.example.user.models.entity.User;
-import com.example.user.repository.UserRepository;
-import com.example.user.request.CreateUserRequest;
-import com.example.user.request.UserUpdateRequest;
-import com.example.user.services.UserService;
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-
-@Service
-@AllArgsConstructor
-public class UserServiceImpl implements UserService {
-
-    private final UserRepository userRepository;
-
-    @Override
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
-    }
-
-    @Override
-    public User getUserById(Long userId) throws ResourceNotFoundException {
-        return userRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("Usuario con ID " + userId + " no encontrado."));
-    }
-
-    @Override
-    public User createUser(CreateUserRequest request) throws AlreadyExistsException {
-        // Verificar si ya existe un usuario con el mismo email
-        if (userRepository.existsByEmail(request.getEmail())) {
-            throw new AlreadyExistsException("Ya existe un usuario con el email " + request.getEmail());
-        }
-        // Construir la entidad User desde el request
-        User user = User.builder()
-                .nombre(request.getNombre())
-                .email(request.getEmail())
-                .password(request.getPassword())
-                .build();
-        return userRepository.save(user);
-    }
-
-    @Override
-    public User updateUser(UserUpdateRequest request, Long userId) throws ResourceNotFoundException {
-        User user = getUserById(userId);  // Lanza excepción si no existe
-        user.setNombre(request.getNombre());
-        user.setEmail(request.getEmail());
-        // Si deseas actualizar password, podrías agregarlo aquí
-        return userRepository.save(user);
-    }
-
-    @Override
-    public void deleteUser(Long userId) throws ResourceNotFoundException {
-        User user = getUserById(userId);  // Lanza excepción si no existe
-        userRepository.delete(user);
-    }
-
-    @Override
-    public UserDto convertUserToDto(User user) {
-        UserDto userDto = new UserDto();
-        userDto.setId(user.getId());
-        userDto.setNombre(user.getNombre());
-        userDto.setEmail(user.getEmail());
-        return userDto;
-    }
-}
-```
-
----
-
-## 8. Controlador
-
-Finalmente, el controlador expone los endpoints REST y maneja las respuestas HTTP:
-
-```java
-package com.example.user.controllers;
-
-import com.example.user.dto.UserDto;
-import com.example.user.exceptions.AlreadyExistsException;
-import com.example.user.exceptions.ResourceNotFoundException;
-import com.example.user.models.entity.User;
-import com.example.user.request.CreateUserRequest;
-import com.example.user.request.UserUpdateRequest;
-import com.example.user.response.ApiResponse;
-import com.example.user.services.UserService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.stream.Collectors;
-
-@RequiredArgsConstructor
-@RestController
-@RequestMapping("${api.prefix}/users")
-public class UserController {
-
-    private final UserService userService;
-
-    /**
-     * GET /users
-     * Devuelve la lista de todos los usuarios en formato DTO.
-     */
-    @GetMapping
-    public ResponseEntity<ApiResponse> getAllUsers() {
-        List<User> users = userService.getAllUsers();
-        List<UserDto> userDtoList = users.stream()
-                .map(userService::convertUserToDto)
-                .collect(Collectors.toList());
-        return ResponseEntity.ok(new ApiResponse("Lista de usuarios", userDtoList));
-    }
-
-    /**
-     * GET /users/{userId}
-     * Obtiene un usuario por su ID.
-     */
-    @GetMapping("/{userId}")
-    public ResponseEntity<ApiResponse> getUserById(@PathVariable Long userId) {
-        try {
-            User user = userService.getUserById(userId);
-            UserDto userDto = userService.convertUserToDto(user);
-            return ResponseEntity.ok(new ApiResponse("Usuario encontrado", userDto));
-        } catch (ResourceNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body(new ApiResponse(e.getMessage(), null));
-        }
-    }
-
-    /**
-     * POST /users
-     * Crea un nuevo usuario a partir de la información provista en CreateUserRequest.
-     */
-    @PostMapping
-    public ResponseEntity<ApiResponse> createUser(@RequestBody CreateUserRequest request) {
-        try {
-            User user = userService.createUser(request);
-            UserDto userDto = userService.convertUserToDto(user);
-            return ResponseEntity.status(HttpStatus.CREATED)
-                    .body(new ApiResponse("Usuario creado con éxito", userDto));
-        } catch (AlreadyExistsException e) {
-            return ResponseEntity.status(HttpStatus.CONFLICT)
-                    .body(new ApiResponse(e.getMessage(), null));
-        }
-    }
-
-    /**
-     * PUT /users/{userId}
-     * Actualiza un usuario existente con los datos suministrados.
-     */
-    @PutMapping("/{userId}")
-    public ResponseEntity<ApiResponse> updateUser(@RequestBody UserUpdateRequest request, @PathVariable Long userId) {
-        try {
-            User user = userService.updateUser(request, userId);
-            UserDto userDto = userService.convertUserToDto(user);
-            return ResponseEntity.ok(new ApiResponse("Usuario actualizado con éxito", userDto));
-        } catch (ResourceNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body(new ApiResponse(e.getMessage(), null));
-        }
-    }
-
-    /**
-     * DELETE /users/{userId}
-     * Elimina un usuario por su ID.
-     */
-    @DeleteMapping("/{userId}")
-    public ResponseEntity<ApiResponse> deleteUser(@PathVariable Long userId) {
-        try {
-            userService.deleteUser(userId);
-            return ResponseEntity.ok(new ApiResponse("Usuario eliminado con éxito", null));
-        } catch (ResourceNotFoundException e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                    .body(new ApiResponse(e.getMessage(), null));
-        }
-    }
-}
-```
-
----
-
-### Comentarios finales
-
-- **Encriptación de contraseñas**: En un proyecto real, **nunca** guardes contraseñas en texto plano. Debes encriptarlas (por ejemplo, con BCrypt) antes de guardarlas.
-- **Validaciones**: Utiliza `@Valid` y anota tus campos con `@NotBlank`, `@Email`, etc. para validar las solicitudes.
-- **Manejo de errores global**: Podrías implementar un `@ControllerAdvice` para manejar las excepciones de forma más centralizada, pero con este enfoque inicial (try-catch) también es válido.
-- **Seguridad**: Considérate usar Spring Security u otro mecanismo para restringir o asegurar tus endpoints.
-
-Con este modelo tendrás un código más limpio, fácil de mantener y con buenas prácticas de arquitectura. ¡Éxitos!
+- LinkedIn: [Vinicio Borja](https://www.linkedin.com/in/vinicio-borja-tapia/)
+- Email: vinicio.borja10@gmail.com
