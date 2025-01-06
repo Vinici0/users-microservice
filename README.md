@@ -56,10 +56,10 @@ Los siguientes servicios están planificados para desarrollo futuro:
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/tuusuario/ecommerce-microservices
+git clone [https://github.com/tuusuario/ecommerce-microservices](https://github.com/Vinici0/users-microservice)
 
 # Navegar al directorio del Product Service
-cd ecommerce-microservices/product-service
+cd users-microservice
 
 # Compilar el servicio
 mvn clean install
